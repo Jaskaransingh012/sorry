@@ -209,40 +209,13 @@
                 <div class="photos-gallery">
                     <div class="photo-item glass-card" data-photo="1">
                         <img src="./assets/image.png" alt="Memory 1" class="photo-image">
-                    </img>
+                    </div>
                     <div class="photo-item glass-card" data-photo="2">
                         <img src="./assets/image copy.png" alt="Memory 2" class="photo-image">
-                    </img>
+                    </div>
                     <div class="photo-item glass-card" data-photo="3">
                         <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                            </svg>
-                            <p>Photo 3</p>
-                        </div>
-                    </div>
-                    <div class="photo-item glass-card" data-photo="4">
-                        <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                            </svg>
-                            <p>Photo 4</p>
-                        </div>
-                    </div>
-                    <div class="photo-item glass-card" data-photo="5">
-                        <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                            </svg>
-                            <p>Photo 5</p>
-                        </div>
-                    </div>
-                    <div class="photo-item glass-card" data-photo="6">
-                        <div class="photo-placeholder">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                            </svg>
-                            <p>Photo 6</p>
+                           <img src="./assets/image copy 2.png" alt="Memory 2" class="photo-image">
                         </div>
                     </div>
                 </div>
@@ -254,8 +227,9 @@
             <div class="photo-popup-overlay"></div>
             <div class="photo-popup-content">
                 <button class="photo-popup-close" id="photo-popup-close">&times;</button>
-                <div class="photo-popup-image-container">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="popup-photo-placeholder">
+                <div class="photo-popup-image-container" id="popup-image-container">
+                    <img id="popup-image" class="popup-photo-image" alt="Memory" style="display: none;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="popup-photo-placeholder" id="popup-svg">
                         <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
                     </svg>
                 </div>

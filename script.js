@@ -51,6 +51,8 @@
     const photoNextBtn = document.getElementById('photo-next');
     const secretVideoPlayer = document.getElementById('secret-video-player');
     const videoDownloadBtn = document.getElementById('video-download-btn');
+    const popupImage = document.getElementById('popup-image');
+    const popupSvg = document.getElementById('popup-svg');
 
     // ============================================
     // STATE
@@ -1073,6 +1075,22 @@
     function openPhotoPopup() {
         photoPopup.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        
+        // Get the current photo item and display its image
+        const currentPhoto = photoItems[currentPhotoIndex];
+        const photoImg = currentPhoto.querySelector('img');
+        
+        if (photoImg && photoImg.src) {
+            // If there's an actual image, show it
+            popupImage.src = photoImg.src;
+            popupImage.alt = photoImg.alt;
+            popupImage.style.display = 'block';
+            popupSvg.style.display = 'none';
+        } else {
+            // Otherwise show the placeholder
+            popupImage.style.display = 'none';
+            popupSvg.style.display = 'block';
+        }
         
         // Create confetti when opening photo
         if (typeof confetti !== 'undefined') {

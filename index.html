@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry ❤️ </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<base target="_blank">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-heart">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </div>
+        <div class="loading-text">Loading something special...</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-glow"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Aurora Background -->
+    <div class="aurora-bg">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+        <div class="aurora-blob blob-4"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Fireflies Canvas -->
+    <canvas id="firefly-canvas"></canvas>
+
+    <!-- Floating Emojis Container -->
+    <div id="floating-emojis"></div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="hero-content">
+                <div class="floating-hearts-container" id="hero-hearts"></div>
+                <h1 class="hero-title">
+                    <span class="typewriter-text" id="hero-heading"></span>
+                    <span class="cursor-blink">|</span>
+                </h1>
+                <p class="hero-subtitle" id="hero-subtitle">
+                    There wasn't a single moment where I wanted to ignore you...
+                </p>
+                <button class="glowing-heart-btn" id="heart-scroll-btn" aria-label="Scroll to story">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="btn-pulse-ring"></span>
+                    <span class="btn-pulse-ring delay"></span>
+                </button>
+                <p class="scroll-hint">Click the heart to begin ❤️</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story" class="section">
+            <div class="story-container">
+                <div class="story-card glass-card" data-story="1">
+                    <p class="story-text">Hey...</p>
+                </div>
+                <div class="story-card glass-card" data-story="2">
+                    <p class="story-text">I know Some things are not happening right</p>
+                </div>
+                <div class="story-card glass-card" data-story="3">
+                    <p class="story-text">I know that hurt.</p>
+                </div>
+                <div class="story-card glass-card" data-story="4">
+                    <p class="story-text">Maybe it felt like that i dont care about your feeling.</p>
+                </div>
+                <div class="story-card glass-card" data-story="5">
+                    <p class="story-text">But the truth is...</p>
+                </div>
+                <div class="story-card glass-card" data-story="6">
+                    <p class="story-text">I really are stressed from family and all.</p>
+                </div>
+                <div class="story-card glass-card" data-story="7">
+                    <p class="story-text">I want to contact you many times par gharo inna gusse ch hunda ki.</p>
+                </div>
+                <div class="story-card glass-card" data-story="8">
+                    <p class="story-text">But even then...</p>
+                </div>
+                <div class="story-card glass-card" data-story="9">
+                    <p class="story-text">You were on my mind and always been.</p>
+                </div>
+                <div class="story-card glass-card" data-story="10">
+                    <p class="story-text">You mean everything to me.</p>
+                </div>
+                <div class="story-card glass-card" data-story="11">
+                    <p class="story-text">You're not just another person.</p>
+                </div>
+                <div class="story-card glass-card" data-story="12">
+                    <p class="story-text">You're my most precious person that i never want to loose.</p>
+                </div>
+                <div class="story-card glass-card" data-story="13">
+                    <p class="story-text">And I never want something this small to create distance between us.</p>
+                </div>
+                <div class="story-card glass-card" data-story="14">
+                    <p class="story-text">I really care about you.</p>
+                </div>
+                <div class="story-card glass-card" data-story="15">
+                    <p class="story-text">Thank you for always being there.</p>
+                </div>
+                <div class="story-card glass-card" data-story="15">
+                    <p class="story-text">I Love you so so much</p>
+                    <span class="heart-emoji">❤️</span>
+                </div>
+                <div class="story-card glass-card" data-story="16">
+                    <p class="story-text">I'm genuinely sorry.</p>
+                    <span class="heart-emoji">❤️</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Forgiveness Section -->
+        <section id="forgiveness" class="section">
+            <div class="forgiveness-container glass-card">
+                <h2 class="forgiveness-question">Will you forgive me?</h2>
+                <div class="forgiveness-buttons">
+                    <button class="btn-yes magnetic-btn" id="btn-yes">
+                        <span class="btn-text">YES</span>
+                        <span class="btn-emoji">❤️</span>
+                        <span class="btn-ripple"></span>
+                    </button>
+                    <button class="btn-no magnetic-btn" id="btn-no">
+                        <span class="btn-text" id="no-text">NO</span>
+                        <span class="btn-emoji">😤</span>
+                        <span class="btn-ripple"></span>
+                    </button>
+                </div>
+                <div id="yes-response" class="yes-response hidden">
+                    <div class="response-hearts" id="response-hearts"></div>
+                    <p class="response-text">I knew my best friend has the biggest heart ❤️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secret Heart -->
+        <div class="secret-heart" id="secret-heart" title="Shhh... it's a secret">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </div>
+
+        <!-- Secret Popup -->
+        <div id="secret-popup" class="secret-popup">
+            <div class="secret-popup-content glass-card">
+                <button class="popup-close" id="popup-close">&times;</button>
+                <div class="popup-heart">💕</div>
+                <p class="popup-text">I'll always be there for you❤️. No matter what.</p>
+            </div>
+        </div>
+
+        <!-- Final Letter Section -->
+        <section id="final-letter" class="section">
+            <div class="final-letter-card glass-card tilt-card" id="letter-card">
+                <div class="letter-header">
+                    <div class="letter-stamp">💌</div>
+                    <h2 class="letter-title">One Last Thing...</h2>
+                </div>
+                <div class="letter-body">
+                    <p>Actually i know you have a sensitive heart and i idiot hurt you.</p>
+                    <p>But your feelings aren't small to me.</p>
+                    <p>You're someone I genuinely love.</p>
+                    <p>If I was angry. That doesnot mean anything. You will always be the most special for me.</p>
+                    <p>And by the way website for delhi phone call and i am so sorry for that also 😭.</p>
+                    <p>Please don't ever think you're unimportant.</p>
+                    <p>And If you have read all Please promise me that even if am angry or you are angry but any point you need me or you want to say anything you will do it. please.</p>
+                    <p>I appreciate every conversation.</p>
+                    <p>Every laugh.</p>
+                    <p>Every memory.</p>
+                    <p>And I hope we make countless more to the end.</p>
+                    <p class="letter-closing">Love you endlessly❤️. An you will always be my motto❤️ </p>
+                </div>
+                <div class="letter-wax-seal">
+                    <div class="wax-seal">
+                        <span>❤️</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photos Gallery Section -->
+        <section id="photos" class="section">
+            <div class="photos-container">
+                <h2 class="photos-title">Our Memories 📸</h2>
+                <p class="photos-subtitle">Click to view</p>
+                <div class="photos-gallery">
+                    <div class="photo-item glass-card" data-photo="1">
+                        <img src="./assets/image.png" alt="Memory 1" class="photo-image">
+                    </img>
+                    <div class="photo-item glass-card" data-photo="2">
+                        <img src="./assets/image copy.png" alt="Memory 2" class="photo-image">
+                    </img>
+                    <div class="photo-item glass-card" data-photo="3">
+                        <div class="photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                            <p>Photo 3</p>
+                        </div>
+                    </div>
+                    <div class="photo-item glass-card" data-photo="4">
+                        <div class="photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                            <p>Photo 4</p>
+                        </div>
+                    </div>
+                    <div class="photo-item glass-card" data-photo="5">
+                        <div class="photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                            <p>Photo 5</p>
+                        </div>
+                    </div>
+                    <div class="photo-item glass-card" data-photo="6">
+                        <div class="photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                            <p>Photo 6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Popup Modal -->
+        <div id="photo-popup" class="photo-popup hidden">
+            <div class="photo-popup-overlay"></div>
+            <div class="photo-popup-content">
+                <button class="photo-popup-close" id="photo-popup-close">&times;</button>
+                <div class="photo-popup-image-container">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="popup-photo-placeholder">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                </div>
+                <p class="photo-popup-text">Special Memory ❤️</p>
+                <div class="photo-popup-nav">
+                    <button class="photo-nav-btn prev" id="photo-prev">&lt;</button>
+                    <button class="photo-nav-btn next" id="photo-next">&gt;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secret Video Section -->
+        <section id="secret-video" class="section">
+            <div class="secret-video-container">
+                <h2 class="secret-video-title">🎬 A Secret Message 💌</h2>
+                <p class="secret-video-subtitle">Something special just for you...</p>
+                
+                <div class="video-player-wrapper glass-card">
+                    <video id="secret-video-player" class="secret-video-player" controls>
+                        <source src="./assets/WhatsApp Video 2026-06-27 at 22.54.53.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <div class="video-controls-bar">
+                        <button class="video-download-btn" id="video-download-btn" title="Download video">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ending Section -->
+        <section id="ending" class="section">
+            <div class="ending-content">
+                <h2 class="ending-title">
+                    <span>❤️</span>
+                    <span>Forever</span>
+                    <span>❤️</span>
+                </h2>
+                <div class="ending-stars" id="ending-stars"></div>
+                <div class="ending-hearts" id="ending-hearts"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Music Player -->
+    <div class="music-player" id="music-player">
+        <button class="music-toggle" id="music-toggle" aria-label="Toggle music player">
+            <svg viewBox="0 0 24 24" fill="currentColor" id="music-icon">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </button>
+        <div class="music-panel hidden" id="music-panel">
+            <div class="music-info">
+                <span class="music-title"> A Song I dedicate to you.</span>
+            </div>
+            <div class="music-controls">
+                <button class="music-btn" id="play-btn" aria-label="Play">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button class="music-btn hidden" id="pause-btn" aria-label="Pause">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+            </div>
+            <div class="music-progress-container">
+                <div class="music-progress-bar" id="music-progress-bar">
+                    <div class="music-progress-fill" id="music-progress-fill"></div>
+                </div>
+                <span class="music-time" id="music-time">0:00 / 3:45</span>
+            </div>
+            <div class="music-volume">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="volume-icon"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50">
+            </div>
+            <audio id="music-audio" preload="auto">
+                <source src="./Your Thoughts(KoshalWorld.Com).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+    <!-- Sparkle Container -->
+    <div id="sparkle-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
